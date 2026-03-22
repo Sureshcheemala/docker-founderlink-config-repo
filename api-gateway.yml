@@ -6,16 +6,14 @@ spring:
       server:
         webflux:
           routes:
-            - id: auth-service
+            - id: auth-service-auth
               uri: lb://AUTH-SERVICE
               predicates:
                 - Path=/auth/**
-            - id: auth-service
+            - id: auth-service-test
               uri: lb://AUTH-SERVICE
               predicates:
                 - Path=/test/**
-              filters:
-                - name: JwtAuthenticationFilter
 
 server:
   port: 8085
