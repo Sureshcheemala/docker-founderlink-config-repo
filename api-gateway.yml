@@ -18,6 +18,10 @@ spring:
               uri: lb://USER-SERVICE
               predicates:
                 - Path=/users/**
+            - id: startup-service
+              uri: lb://STARTUP-SERVICE
+              predicates:
+               - Path=/startups/**
 
 server:
   port: 8085
