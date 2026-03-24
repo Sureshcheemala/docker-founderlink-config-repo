@@ -26,6 +26,10 @@ spring:
               uri: lb://INVESTMENT-SERVICE
               predicates:
                 - Path=/investments/**
+            - id: team-service
+              uri: lb://TEAM-SERVICE
+              predicates:
+                - Path=/teams/**
 
 server:
   port: 8085
