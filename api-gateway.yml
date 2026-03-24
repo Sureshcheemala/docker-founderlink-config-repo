@@ -30,6 +30,10 @@ spring:
               uri: lb://TEAM-SERVICE
               predicates:
                 - Path=/teams/**
+            - id: notification-service
+              uri: lb://NOTIFICATION-SERVICE
+              predicates:
+                - Path=/notifications/**
 
 server:
   port: 8085
