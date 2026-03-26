@@ -39,3 +39,8 @@ management:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
 
+springdoc:
+  api-docs:
+    path: /auth/v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
