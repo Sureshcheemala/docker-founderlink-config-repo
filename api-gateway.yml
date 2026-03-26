@@ -40,44 +40,32 @@ spring:
               uri: lb://AUTH-SERVICE
               predicates:
                 - Path=/auth/v3/api-docs
-              filters:
-               - RewritePath=/auth/(?<segment>.*), /$\{segment}
 
             - id: user-docs
               uri: lb://USER-SERVICE
               predicates:
                 - Path=/users/v3/api-docs
-              filters:
-               - RewritePath=/users/(?<segment>.*), /$\{segment}
-
+              
             - id: startup-docs
               uri: lb://STARTUP-SERVICE
               predicates:
                 - Path=/startups/v3/api-docs
-              filters:
-               - RewritePath=/stratups/(?<segment>.*), /$\{segment}
-
+              
             - id: investment-docs
               uri: lb://INVESTMENT-SERVICE
               predicates:
                 - Path=/investments/v3/api-docs
-              filters:
-               - RewritePath=/investments/(?<segment>.*), /$\{segment}
 
             - id: team-docs
               uri: lb://TEAM-SERVICE
               predicates:
                 - Path=/teams/v3/api-docs
-              filters:
-               - RewritePath=/teams/(?<segment>.*), /$\{segment}
-
+              
             - id: notification-docs
               uri: lb://NOTIFICATION-SERVICE
               predicates:
                 - Path=/notifications/v3/api-docs
-              filters:
-               - RewritePath=/notifications/(?<segment>.*), /$\{segment}
-
+              
 
 server:
   port: 8085
