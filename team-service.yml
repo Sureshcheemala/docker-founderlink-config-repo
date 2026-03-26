@@ -6,7 +6,7 @@ spring:
     name: TEAM-SERVICE
 
   datasource:
-    url: jdbc:mysql://mysql-db:3306/team_db?createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysql:3306/team_db?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
