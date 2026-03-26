@@ -6,9 +6,9 @@ spring:
     name: TEAM-SERVICE
 
   datasource:
-    url: jdbc:mysql://localhost:3306/team_db?createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysql-db:3306/team_db?createDatabaseIfNotExist=true
     username: root
-    password: MySql@123
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -23,7 +23,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://discovery-server:8761/eureka
 
 management:
   endpoints:
@@ -37,4 +37,4 @@ management:
 
   zipkin:
     tracing:
-      endpoint: http://localhost:9411/api/v2/spans
+      endpoint: http://zipkin:9411/api/v2/spans
