@@ -35,6 +35,38 @@ spring:
               predicates:
                 - Path=/notifications/**
 
+          #--------swagger------------
+            - id: auth-docs
+              uri: lb://AUTH-SERVICE
+              predicates:
+                - Path=/auth/v3/api-docs
+
+            - id: user-docs
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/users/v3/api-docs
+
+            - id: startup-docs
+              uri: lb://STARTUP-SERVICE
+              predicates:
+                - Path=/startups/v3/api-docs
+
+            - id: investment-docs
+              uri: lb://INVESTMENT-SERVICE
+              predicates:
+                - Path=/investments/v3/api-docs
+
+            - id: team-docs
+              uri: lb://TEAM-SERVICE
+              predicates:
+                - Path=/teams/v3/api-docs
+
+            - id: notification-docs
+              uri: lb://NOTIFICATION-SERVICE
+              predicates:
+                - Path=/notifications/v3/api-docs
+
+
 server:
   port: 8085
 
@@ -64,3 +96,20 @@ management:
 zipkin:
   tracing:
     endpoint: http://localhost:9411/api/v2/spans
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - name: AUTH-SERVICE
+        url: /auth/v3/api-docs
+      - name: USER-SERVICE
+        url: /users/v3/api-docs
+      - name: STARTUP-SERVICE
+        url: /startups/v3/api-docs
+      - name: INVESTMENT-SERVICE
+        url: /investments/v3/api-docs
+      - name: TEAM-SERVICE
+        url: /teams/v3/api-docs
+      - name: NOTIFICATION-SERVICE
+        url: /notifications/v3/api-docs
