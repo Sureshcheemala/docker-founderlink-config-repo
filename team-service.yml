@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: TEAM-SERVICE
+    name: team-service
 
   datasource:
     url: jdbc:mysql://mysql:3306/team_db?createDatabaseIfNotExist=true

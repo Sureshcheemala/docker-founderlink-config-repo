@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: AUTH-SERVICE
+    name: auth-service
 
   datasource:
     url: jdbc:mysql://mysql:3306/auth_db?createDatabaseIfNotExist=true

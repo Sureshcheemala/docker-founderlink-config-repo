@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: STARTUP-SERVICE
+    name: startup-service
 
   datasource:
     url: jdbc:mysql://mysql:3306/startup_db?createDatabaseIfNotExist=true

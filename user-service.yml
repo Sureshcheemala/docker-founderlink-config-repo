@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: USER-SERVICE
+    name: user-service
 
   datasource:
     url: jdbc:mysql://mysql:3306/UserProfile_db?createDatabaseIfNotExist=true

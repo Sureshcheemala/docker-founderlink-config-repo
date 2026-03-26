@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: INVESTMENT-SERVICE
+    name: investment-service
 
   datasource:
     url: jdbc:mysql://mysql:3306/investment_db?createDatabaseIfNotExist=true
