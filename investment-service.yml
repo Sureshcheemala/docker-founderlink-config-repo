@@ -41,4 +41,4 @@ management:
 
 springdoc:
   api-docs:
-    path: /v3/api-docs
+    path: /investments/v3/api-docs
